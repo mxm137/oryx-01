@@ -57,38 +57,37 @@
         <p></p>
         <Container fluid>
           <Tabs defaultActiveKey={activeTab} id="tab0" className="mb-3" onSelect={(k) => onSelectTab(k)}>
-        
-            <Tab eventKey="live" title={t('scenario.live')}>
+            <Tab eventKey="live" title={t('scenario.live')} disabled={true}>
               {activeTab === 'live' && <ScenarioLiveStreams {...{urls}} />}
             </Tab>
-            <Tab eventKey="stream" title={t('scenario.stream')}>
+            <Tab eventKey="stream" title={t('scenario.stream')} disabled={true}>
               {activeTab === 'stream' && <ScenarioLiveRoom/>}
             </Tab>
-            <Tab eventKey="forward" title={t('scenario.forward')}>
+            <Tab eventKey="forward" title={t('scenario.forward')} disabled={true}>
               {activeTab === 'forward' && <ScenarioForward/>}
             </Tab>
-            <Tab eventKey="record" title={t('scenario.record')}>
+            <Tab eventKey="record" title={t('scenario.record')} disabled={true}>
               {activeTab === 'record' && <ScenarioRecord/>}
             </Tab>
             <Tab eventKey="vlive" title={t('scenario.vlive')}>
               {activeTab === 'vlive' && <ScenarioVLive/>}
             </Tab>
-            <Tab eventKey="camera" title={t('scenario.camera')}>
+            <Tab eventKey="camera" title={t('scenario.camera')} disabled={true}>
               {activeTab === 'camera' && <ScenarioCamera/>}
             </Tab>
-            <Tab eventKey="transcode" title={t('scenario.transcode')}>
+            <Tab eventKey="transcode" title={t('scenario.transcode')} disabled={true}>
               {activeTab === 'transcode' && <ScenarioTranscode {...{urls}} />}
             </Tab>
-            <Tab eventKey="transcript" title={t('transcript.title')}>
+            <Tab eventKey="transcript" title={t('transcript.title')} disabled={true}>
               {activeTab === 'transcript' && <ScenarioTranscript/>}
             </Tab>
-            <Tab eventKey="dubbing" title={t('dubb.title')}>
+            <Tab eventKey="dubbing" title={t('dubb.title')} disabled={true}>
               {activeTab === 'dubbing' && <ScenarioDubbing/>}
             </Tab>
-            <Tab eventKey="ocr" title={t('ocr.title')}>
+            <Tab eventKey="ocr" title={t('ocr.title')} disabled={true}>
               {activeTab === 'ocr' && <ScenarioOCR/>}
             </Tab>
-            <Tab eventKey="others" title={t('scenario.others')}>
+            <Tab eventKey="others" title={t('scenario.others')} disabled={true}>
               {activeTab === 'others' && <ScenarioVxOthers {...{urls}} />}
             </Tab>
           </Tabs>
@@ -96,4 +95,3 @@
       </>
     );
   }
-
